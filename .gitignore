@@ -1,14 +1,20 @@
-<<<<<<< HEAD
+# Dependencies
 /vendor/
 node_modules/
+
+# Debugging logs
 npm-debug.log
 yarn-error.log
+composer.lock
 
 # Laravel 4 specific
 bootstrap/compiled.php
 app/storage/
 
 # Laravel 5 & Lumen specific
+storage/
+storage/*.key
+bootstrap/cache/
 public/storage
 public/hot
 
@@ -16,33 +22,45 @@ public/hot
 public_html/storage
 public_html/hot
 
-storage/*.key
+# Environment files
 .env
+.env.*.local
+.env.backup
+.env.production
+!.env.example  # Memastikan .env.example tetap ter-track
+
+# Homestead & Vagrant
 Homestead.yaml
 Homestead.json
 /.vagrant
+
+# PHPUnit
 .phpunit.result.cache
 
+# IDE & Editor files
+/.phpactor.json
+/.phpstorm.meta.php
+/.idea/
+/*.sublime-project
+/*.sublime-workspace
+
+# Logs & temp files
+storage/logs/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/testing/
+storage/framework/views/
+storage/debugbar/
+storage/pail
+*.log
+
+# Build files
 /public/build
-/storage/pail
-.env.backup
-.env.production
-.phpactor.json
-auth.json
-=======
-/node_modules
+/public/mix-manifest.json
+/public/css
+/public/js
 /public/hot
-/public/storage
-/storage/*.key
-/vendor
-.env
-.env.backup
-.phpunit.result.cache
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-composer.lock
->>>>>>> 2f10df5 (Initial commit)
+
+# Authentication & sensitive files
+auth.json
 .plan.txt
-.Oknm5ZxQ07iiB5pTAztBNlvOqOQdUFrSLQAlxLsI.jpg
